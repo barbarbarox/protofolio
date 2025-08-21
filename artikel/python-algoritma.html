@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instalasi Kali Linux di VirtualBox</title>
+  <link rel="stylesheet" href="kali-linux.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" href="../barox.png" type="image/png" />
+</head>
+<div id="animated-background"></div>
+<body>
+  <!-- Background -->
+  <div id="animated-background"></div>
+
+  <!-- Top Navigation -->
+  <nav class="top-menu">
+    <div class="menu-wrapper">
+      <button class="menu-btn home-btn" onclick="window.location.href='../about.html'">About Me</button>
+      <button class="menu-btn" onclick="window.location.href='../project.html'">Project</button>
+      <button class="menu-btn" onclick="window.location.href='../index.html'"><i class="fas fa-home"></i></button>
+      <button class="menu-btn" onclick="window.location.href='../contact.html'">Contact</button>
+      <button class="menu-btn" onclick="window.location.href='../Skills.html'">Skills</button>
+    </div>
+    <div class="article-header-bar">
+      <span>Artikel</span>
+    </div>
+  </nav>
+  <main class="article-content">
+    <h1>Computational Thinking</h1>
+    <p class="meta">Tag: <span class="tag">Algoritma</span> • <span>2025</span></p>
+    <section id="computational-thinking">
+        <h2>1. Apa itu Computational Thinking?</h2>
+        <p>
+            Computational Thinking (CT) adalah pendekatan berpikir yang digunakan dalam ilmu komputer untuk menyelesaikan masalah secara sistematis dan logis. Tujuan utama dari CT adalah mengembangkan keterampilan dalam memecahkan masalah dengan cara yang efisien, terstruktur, dan dapat diprogramkan. Ada empat tahapan utama dalam Computational Thinking yang harus dipahami.
+        </p>
+        
+        <h3>1.1 Abstraksi</h3>
+        <p>
+            Abstraksi adalah proses menyaring informasi yang tidak relevan dan hanya mempertahankan informasi yang penting untuk menyelesaikan masalah. Dalam tahap ini, kita mencoba untuk memahami inti dari masalah dan mengabaikan detil-detil yang tidak relevan.
+        </p>
+        <p>
+        <ul>
+            <li>Contoh: Ketika kita ingin menghitung harga setelah diskon, kita hanya perlu tahu harga barang dan persentase diskon, tanpa memikirkan bagaimana proses transaksi dilakukan di kasir.</li>
+        </ul>
+        </p>
+
+        <h3>1.2 Pengenalan Pola</h3>
+        <p>
+            Pengenalan pola adalah tahap di mana kita mencari kesamaan atau pola dalam data yang ada, yang dapat membantu kita menemukan solusi yang lebih cepat dan lebih efisien.
+        </p>
+        <p>
+        <ul>
+            <li>Contoh: Dalam kasus diskon, kita bisa melihat pola bahwa diskon selalu diterapkan pada harga barang tertentu, dan rumus yang sama dapat digunakan untuk semua produk dengan syarat yang sama.</li>
+        </ul>
+        </p>
+
+        <h3>1.3 Algoritma</h3>
+        <p>
+            Algoritma adalah serangkaian langkah-langkah yang harus diikuti untuk menyelesaikan masalah. Dalam tahap ini, kita menyusun langkah-langkah yang jelas dan terstruktur yang dapat dipahami oleh mesin atau komputer.
+        </p>
+        <p>
+        <ul>
+            <li>Contoh: Algoritma untuk menghitung harga akhir setelah diskon yang telah kita bahas sebelumnya, yaitu dengan mengurangi harga awal dengan nilai diskon yang dihitung.</li>
+        </ul>
+        </p>
+
+        <h3>1.4 Dekomposisi</h3>
+        <p>
+            Dekomposisi adalah proses memecah masalah besar menjadi bagian-bagian yang lebih kecil dan lebih mudah untuk dipecahkan. Dengan membagi masalah menjadi sub-masalah yang lebih sederhana, kita bisa lebih mudah menemukan solusi.
+        </p>
+        <p>
+        <ul>
+            <li>Contoh: Jika kita ingin membuat aplikasi kasir, kita bisa memecah masalah menjadi beberapa bagian kecil seperti menghitung diskon, menghitung pajak, dan menghitung total belanja.</li>
+        </ul>
+        </p>
+    </section>
+
+    <section id="algoritma">
+        <h2>2. Algoritma: Deskriptif, Flowchart, dan Pseudo Code</h2>
+        <p>
+            Algoritma adalah langkah-langkah yang terstruktur untuk menyelesaikan masalah tertentu. Ada beberapa cara untuk mendeskripsikan algoritma, yaitu dengan menggunakan deskripsi teks, flowchart, atau pseudo code.
+        </p>
+
+        <h3>2.1 Algoritma Deskriptif</h3>
+        <p>
+            Algoritma deskriptif adalah cara untuk menjelaskan algoritma dengan menggunakan teks biasa, menjelaskan setiap langkah secara rinci. Algoritma ini sangat mudah dipahami karena tidak membutuhkan aturan sintaksis tertentu.
+        </p>
+        <ul>
+            <li>Contoh: "Ambil harga barang, ambil persentase diskon, hitung nilai diskon, dan tampilkan harga akhir."</li>
+        </ul>
+        <p></p>
+        <h3>2.2 Flowchart</h3>
+        <p>
+            Flowchart adalah diagram visual yang menggambarkan alur algoritma dengan simbol-simbol grafis. Setiap langkah dalam algoritma digambarkan dengan simbol tertentu seperti persegi panjang untuk proses dan belah ketupat untuk keputusan.
+        </p>
+        <ul>
+            <li>Contoh: Flowchart menggambarkan proses mulai dari memasukkan harga barang hingga menampilkan harga akhir setelah diskon.</li>
+        </ul>
+        <p></p>
+
+        <h3>2.3 Pseudo Code</h3>
+        <p>
+            Pseudo code adalah penulisan algoritma menggunakan bahasa yang menyerupai bahasa pemrograman, tetapi tidak terikat pada aturan sintaksis bahasa pemrograman tertentu. Pseudo code sering digunakan untuk merancang algoritma sebelum diimplementasikan ke dalam kode program.
+        </p>
+        <ul>
+            <li>Contoh: 
+            <pre>
+            START
+            input harga
+            input diskon
+            diskon = harga * (diskon / 100)
+            harga_akhir = harga - diskon
+            output harga_akhir
+            END
+            </pre>
+            </li>
+        </ul>
+        <p></p>
+    </section>
+
+    <section id="tahapan-algoritma">
+        <h2>3. Tahapan Membuat Algoritma Deskripsi</h2>
+        <p>
+            Dalam membuat algoritma deskriptif, ada beberapa tahapan yang harus dilalui agar solusi yang dihasilkan jelas dan efisien. Berikut adalah tahapan-tahapan tersebut.
+        </p>
+        <h3>3.1 Menentukan Ruang Lingkup Masalah</h3>
+        <p>
+            Langkah pertama adalah memahami ruang lingkup masalah, yaitu mendefinisikan masalah secara jelas dan menentukan apa yang harus dicapai dengan algoritma tersebut.
+        </p>
+        <ul>
+            <li>Contoh: Kita ingin membuat algoritma untuk menghitung harga barang setelah diskon.</li>
+        </ul>
+        <p></p>
+
+        <h3>3.2 Menentukan Constraint (Kendala)</h3>
+        <p>
+            Menentukan batasan-batasan atau constraint, termasuk kondisi awal dan kondisi akhir yang diinginkan. Ini memastikan algoritma berfungsi dalam batasan yang ada.
+        </p>
+        <ul>
+            <li>Contoh:Harga barang dan persentase diskon diketahui, dan hasil yang diinginkan adalah harga akhir setelah diskon.</li>
+        </ul>
+        <p></p>
+
+        <h3>3.3 Menentukan Sub-Aksi</h3>
+        <p>
+            Tentukan langkah-langkah atau sub-aksi yang diperlukan untuk menyelesaikan masalah. Ini memecah masalah menjadi bagian-bagian yang lebih kecil dan lebih mudah diselesaikan.
+        </p>
+        <ul>
+            <li>Contoh: Langkah-langkah untuk menghitung harga akhir: 1) Masukkan harga, 2) Masukkan diskon, 3) Hitung diskon, 4) Hitung harga akhir.</li>
+        </ul>
+        <p></p>
+
+        <h3>3.4 Menulis Algoritma</h3>
+        <p>
+            Setelah memahami ruang lingkup, kendala, dan sub-aksi, kita dapat menulis algoritma deskriptif yang jelas dan terstruktur.
+        </p>
+        <ul>
+            <li>Contoh: Deskripsi algoritma yang telah kita bahas sebelumnya untuk menghitung harga setelah diskon.</li>
+        </ul>
+        </section>
+    </section>
+    <p></p>
+    <footer>
+        <p>Artikel ini ditulis untuk membantu memahami computational thinking dan algoritma dalam pemrograman.</p>
+    </footer>
+
+  </main>
+
+
+</body>
+</html>

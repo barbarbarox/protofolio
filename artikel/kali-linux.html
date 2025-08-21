@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instalasi Kali Linux di VirtualBox</title>
+  <link rel="stylesheet" href="kali-linux.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" href="../barox.png" type="image/png" />
+</head>
+<div id="animated-background"></div>
+<body>
+  <!-- Background -->
+  <div id="animated-background"></div>
+
+  <!-- Top Navigation -->
+  <nav class="top-menu">
+    <div class="menu-wrapper">
+      <button class="menu-btn home-btn" onclick="window.location.href='../about.html'">About Me</button>
+      <button class="menu-btn" onclick="window.location.href='../project.html'">Project</button>
+      <button class="menu-btn" onclick="window.location.href='../index.html'"><i class="fas fa-home"></i></button>
+      <button class="menu-btn" onclick="window.location.href='../contact.html'">Contact</button>
+      <button class="menu-btn" onclick="window.location.href='../Skills.html'">Skills</button>
+    </div>
+    <div class="article-header-bar">
+      <span>Artikel</span>
+    </div>
+  </nav>
+
+  <!-- Konten Artikel -->
+  <main class="article-content">
+    <h1>Instalasi Kali Linux di VirtualBox</h1>
+    <p class="meta">Tag: <span class="tag">Cyber</span> <span class="tag">Linux</span> <span class="tag">VirtualBox</span> • <span>2025</span></p>
+
+    <p>Artikel ini memberikan panduan lengkap untuk menginstal <strong>Kali Linux</strong> di dalam <strong>VirtualBox</strong>. Ini cocok untuk kamu yang ingin belajar ethical hacking di lingkungan aman tanpa mengganggu sistem utama.</p>
+
+    <!-- Langkah 1 -->
+    <h2>Langkah 1: Unduh Semua File yang Dibutuhkan</h2>
+    <p>Pastikan kamu mengunduh semua file berikut sebelum memulai instalasi:</p>
+    <ul>
+      <li>🔗 <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">VirtualBox & Extension Pack</a></li>
+      <li>🔗 <a href="https://www.kali.org/get-kali/#kali-installer-images" target="_blank">File ISO Kali Linux</a></li>
+      <li>🔗 <a href="https://learn.microsoft.com/id-id/cpp/windows/latest-supported-vc-redist?view=msvc-170" target="_blank">Microsoft Visual C++ Redistributable</a></li>
+    </ul>
+    <p>Pastikan kamu memilih versi yang sesuai dengan sistem operasi dan arsitektur (Windows/macOS/Linux - x86/x64/ARM64).</p>
+    <img src="../artikel/gambar/kali-virual.png" alt="Buat mesin virtual baru">
+    <img src="../artikel/gambar/kali-linux.png" alt="Buat mesin virtual baru">
+    <img src="../artikel/gambar/microsoftc++.png" alt="Buat mesin virtual baru">
+
+    <!-- Langkah 2 -->
+    <h2>Langkah 2: Instalasi Software</h2>
+    <p>Lakukan instalasi dengan urutan sebagai berikut:</p>
+    <ul>
+      <li>Install Microsoft Visual C++ Redistributable.</li>
+      <li>Install VirtualBox dari file <code>.exe</code>. Setelah itu buka virtualboxnya.</li>
+      <li>Tambahkan Extension Pack melalui menu <strong>File &gt; Tools &gt; Extension Pack Manager</strong>.</li>
+    </ul>
+
+    <!-- Langkah 3 -->
+    <h2>Langkah 3: Buat Mesin Virtual di VirtualBox</h2>
+    <p>Buka VirtualBox dan klik tombol <strong>New</strong>. Isi data berikut:</p>
+    <ul>
+      <li><strong>Name:</strong>nama mesin mu</li>
+      <li><strong>Type:</strong> Linux</li>
+      <li><strong>Version:</strong> Ubuntu (64-bit)</li>
+    </ul>
+    <img src="../artikel/gambar/new-machine.png" alt="Buat mesin virtual baru">
+
+    <!-- Langkah 4 -->
+    <h2>Langkah 4: Atur Resource RAM dan Hard Disk</h2>
+    <ul>
+      <li><strong>RAM(Base Memory):</strong> Minimum 2048MB (2GB), disarankan 4GB atau lebih</li>
+      <li><strong>Hard Disk:</strong> Minimal 25 GB disarankan 50 GB</li>
+    </ul>
+
+    <!-- Langkah 5 -->
+    <h2>Langkah 5: Atur Tampilan</h2>
+    <p>Pilih Mesin Virtual mu, Masuk ke <strong>Settings</strong> mesin virtual, lalu:</p>
+    <ul>
+      <li>Display → ubah <strong>Video Memory</strong> menjadi 128 MB</li>
+    </ul>
+    <img src="../artikel/gambar/vb-atur.png" alt="Hubungkan ISO Kali Linux">
+
+    <!-- Langkah 6 -->
+    <h2>Langkah 6: Jalankan Instalasi Kali Linux</h2>
+    <p>Mulai mesin virtual dengan klik <strong>Start</strong>. Pada layar awal pilih <strong>Graphical Install</strong>, lalu ikuti langkah-langkah berikut:</p>
+    <ul>
+      <li>Pilih bahasa, lokasi, dan layout keyboard (saya sarankan ikuti pilihan default)</li>
+      <li>Masukkan hostname dan domain (biarkan default jika tidak yakin)</li>
+      <li>Buat username dan password</li>
+      <li>Partisi disk → pilih opsi <em>Guided - use entire disk</em></li>
+      <li>Ikuti pilihan defaultdari kali linux</li>
+    </ul>
+    <p>Tunggu proses instalasi hingga selesai. Proses ini bisa memakan waktu 30–60 menit tergantung spesifikasi PC.</p>
+    <img src="../artikel/gambar/vb-i (1).png" alt="Mulai instalasi Kali Linux">
+    <img src="../artikel/gambar/vb-i (2).png" alt="Mulai instalasi Kali Linux">
+    <img src="../artikel/gambar/vb-i (3).png">
+    <img src="../artikel/gambar/vb-i (4).png">
+    <img src="../artikel/gambar/vb-i (5).png">
+    <img src="../artikel/gambar/vb-i (6).png">
+    <img src="../artikel/gambar/vb-i (7).png">
+    <img src="../artikel/gambar/vb-i (8).png">
+    <img src="../artikel/gambar/vb-i (9).png">
+    <img src="../artikel/gambar/vb-i (10).png">
+    <img src="../artikel/gambar/vb-i (11).png">
+    <img src="../artikel/gambar/vb-i (12).png">
+    <img src="../artikel/gambar/vb-i (13).png">
+    <img src="../artikel/gambar/vb-i (14).png">
+    <img src="../artikel/gambar/vb-i (15).png">
+    <img src="../artikel/gambar/vb-i (16).png">
+    <img src="../artikel/gambar/vb-i (17).png">
+
+
+    <!-- Langkah 7 -->
+    <h2>Langkah 7: Login dan Konfigurasi Awal</h2>
+    <p>Setelah reboot, login menggunakan akun yang telah dibuat. Kamu sekarang berada di desktop Kali Linux. Disarankan untuk:</p>
+    <ul>
+      <li>Jalankan <code>sudo apt update && sudo apt upgrade</code></li>
+      <li>Pastikan koneksi internet berfungsi</li>
+      <li>Install Guest Additions (untuk dukungan layar penuh, clipboard, dan drag-drop)</li>
+    </ul>
+    <img src="../artikel/gambar/vb-a (1).png">
+    <img src="../artikel/gambar/vb-a (2).png">
+    <img src="../artikel/gambar/vb-f.png">
+
+    <p>🎉 <strong>Selamat!</strong> Kali Linux sudah siap digunakan. Kini kamu bisa mulai belajar ethical hacking secara aman dan nyaman di mesin virtual.</p>
+  </main>
+
+
+</body>
+</html>
