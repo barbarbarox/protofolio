@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project</title>
+  <link rel="stylesheet" href="project.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" href="barox.png" type="image/png" />
+</head>
+<body>
+  <div class="animated-background">
+
+    <!-- PROJECT SECTION -->
+    <section id="project-section" class="project">
+      <!-- Background -->
+      <div id="animated-background"></div>
+
+      <!-- Top Navigation -->
+      <nav class="top-menu">
+        <div class="menu-wrapper">
+          <button class="menu-btn" onclick="window.location.href='skills.html'">Skils</button>
+          <button class="menu-btn" onclick="window.location.href='about.html'">About me</button>
+          <button class="menu-btn" onclick="window.location.href='index.html'"><i class="fas fa-home"></i></button>
+          <button class="menu-btn" onclick="window.location.href='contact.html'">Contact</button>
+          <button class="menu-btn" onclick="window.location.href='article.html'">Article</button>
+        </div>
+      </nav>
+
+      <!-- Header Bar -->
+      <div class="project-header-bar">
+        <span>project</span>
+      </div>
+
+      <!-- PROJECT CAROUSEL -->
+      <section class="project-selection">
+        <button class="arrow left" id="prevBtn">&#9664;</button>
+
+        <div class="project-track-container">
+          <div class="project-card-wrapper" id="projectCardWrapper">
+            <!-- Diisi melalui JavaScript -->
+          </div>
+        </div>
+
+        <button class="arrow right" id="nextBtn">&#9654;</button>
+      </section>
+
+      <!-- LIHAT PROJECT BUTTON -->
+      <div class="see-button">
+        <button id="seeProjectBtn">Lihat Project</button>
+      </div>
+
+      <!-- OVERLAY -->
+      <div class="overlay hidden" id="projectOverlay">
+        <div class="overlay-content">
+          <div class="overlay-column desc">
+            <h3>Deskripsi Project</h3>
+            <p id="projectDesc"></p>
+          </div>
+          <div class="overlay-column preview">
+            <img id="mainPreviewImg" src="" alt="Preview">
+            <h3 id="projectTitle"></h3>
+            <button id="closeOverlay" class="close-btn">Oke</button>
+          </div>
+          <div class="overlay-column docs">
+            <h3>Dokumentasi Project</h3>
+            <div class="doc-gallery" id="docGallery">
+              <!-- Diisi oleh JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="project.js"></script>
+</body>
+</html>

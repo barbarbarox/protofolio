@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+/* --------------------
+   Animated Background
+--------------------- */
+.animated-background {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(-45deg, #0F2027, #203A43, #221754, #2a1a79);
+  background-size: 600% 600%;
+  animation: bgAnimation 5s ease infinite;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+#particle-canvas,
+#starscape-canvas,
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@keyframes bgAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --------------------
+   Intro & Main Heading
+--------------------- */
+.intro-text {
+  font-size: 2.8rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00c3cc, #3372e3, #cb6cc6, #8c52ff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 5s ease-in-out infinite, neonPulse 1.5s ease-in-out infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s ease;
+  text-align: center;
+  z-index: 10;
+}
+
+.move-up {
+  top: 18%;
+  font-size: 2.2rem;
+  transform: translateX(-50%);
+}
+
+/* Deskripsi singkat dengan efek ketik */
+.subtext {
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: center;
+  max-width: 700px;
+  margin-top: 1rem;
+  line-height: 2;
+  white-space: pre-wrap;
+}
+
+
+/* --------------------
+   Main Content
+--------------------- */
+#main-content {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 1s ease;
+  text-align: center;
+  z-index: 5;
+  margin-top: 100px;
+}
+
+#main-content.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 1rem 0;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInZoom 1s ease 0.4s forwards;
+}
+
+@keyframes fadeInZoom {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.menu {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.menu-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  background: radial-gradient(circle at center, #105799, #36d1c7);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.menu-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(59, 205, 200, 0.5);
+}
+
+.watermark {
+  font-size: 0.9rem;
+  color: #adacac;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes neonPulse {
+  from {
+    text-shadow: 0 0 8px #00c3cc;
+  }
+  to {
+    text-shadow: 0 0 15px #8c52ff, 0 0 30px #3372e3;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    gap: 1rem;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .intro-text {
+    font-size: 1.8rem;
+    top: 20%;
+  }
+
+  .move-up {
+    font-size: 1.4rem;
+    top: 10%;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    margin-top: 0.5rem;
+  }
+
+  #main-content {
+    margin-top: 40px;
+  }
+
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    justify-content: center;
+  }
+
+  .menu-btn {
+    width: 210px;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .watermark {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+

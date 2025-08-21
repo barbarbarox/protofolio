@@ -1,0 +1,456 @@
+/* === Global === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* === Warna teks dalam slide putih === */
+.slide,
+.slide * {
+  color: #ffffff;
+}
+
+/* === Background & Partikel === */
+#animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(-45deg, #0F2027, #203A43, #221754, #2a1a79);
+  background-size: 600% 600%;
+  animation: bgAnimation 5s ease infinite;
+  z-index: -1;
+}
+
+@keyframes bgAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === Spasi antar bagian === */
+.top-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 1.2rem;
+}
+
+/* === Wrapper Tombol Menu === */
+.menu-wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-btn {
+  padding: 10px 22px;
+  background: linear-gradient(to right, #00d2ff, #3a7bd5);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 210, 255, 0.3);
+}
+
+.menu-btn:hover {
+  transform: scale(1.5);
+  box-shadow: 0 6px 16px rgba(59, 205, 238, 0.5);
+}
+
+.menu-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 6px rgba(0, 210, 255, 0.7);
+}
+.about-me-header-bar {
+  width: 80%;
+  max-width: 720px;
+  height: 16px;
+  background: linear-gradient(to right, #00d2ff, #3a7bd5);
+  border-radius: 50px;
+  margin: 20px auto 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-header-bar span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #00d2ff;
+  padding: 10px 40px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.about-me-slider {
+  margin-top: 2rem;
+}
+
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* === Top Navigation === */
+.top-menu {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.menu-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(to right, #00d2ff, #3a7bd5);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.8s;
+}
+
+.menu-btn:hover {
+  transform: scale(1.1);
+}
+
+.about-me-title {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00d2ff;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  animation: slideDown 0.8s ease;
+}
+
+@keyframes slideDown {
+  0% { transform: translate(-50%, -50px); opacity: 0; }
+  100% { transform: translate(-50%, 0); opacity: 1; }
+}
+
+/* === Slider Container === */
+.about-me-slider {
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem;
+  position: relative;
+}
+
+.slide-wrapper {
+  background-color: rgba(116, 115, 115, 0.2);
+  padding: 2rem;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  display: none;
+  animation: fadeSlide 1s ease;
+}
+
+.slide.active {
+  display: block;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.slide-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.badge {
+  background: white;
+  color: black;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 30px;
+}
+
+.icon {
+  width: 40px;
+}
+
+/* === Slide 2: Data Diri === */
+.slide-data p {
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 25px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.slide-img {
+  float: right;
+  transform: skew(-10deg);
+  margin-top: -60px;
+}
+
+.slide-img img {
+  width: 150px;
+  border-radius: 15px;
+}
+
+/* === Slide 3: Logo Floating === */
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 4rem;
+}
+
+.tech-icons img {
+  width: 90px;
+  animation: floatUpDown 1.5s ease-in-out infinite alternate,
+             flipLogo 6s linear infinite;
+  will-change: transform;
+}
+
+
+@keyframes floatUpDown {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-12px); }
+}
+
+@keyframes flipLogo {
+  0% { transform: rotateY(0); }
+  100% { transform: rotateY(360deg); }
+}
+
+/* === Navigasi Panah === */
+.nav-arrow {
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.nav-arrow.left {
+  left: -40px;
+}
+
+.nav-arrow.right {
+  right: -40px;
+}
+
+.nav-arrow img {
+  width: 40px;
+  transition: transform 0.5s;
+}
+
+.nav-arrow:hover img {
+  transform: scale(1.2);
+}
+
+/* === Footer Watermark === */
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* === Wrapper Menu Atas === */
+.menu-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  animation: menuSlideUp 1s ease forwards;
+}
+
+@keyframes menuSlideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.menu-btn {
+  padding: 10px 22px;
+  background: linear-gradient(to right, #00d2ff, #3a7bd5);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.8s ease;
+}
+
+.menu-btn:hover {
+  transform: scale(1.1);
+}
+
+/* === Tombol Judul About Me === */
+.about-me-title {
+  background: #00d2ff;
+  padding: 12px 60px;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  margin-top: 1.5rem;
+  text-align: center;
+  animation: titlePop 1s ease forwards;
+}
+
+@keyframes titlePop {
+  from { opacity: 0; transform: scaleX(0.6); }
+  to { opacity: 1; transform: scaleX(1); }
+}
+
+.animate-expand {
+  transform-origin: center;
+}
+
+/* === Tombol Home Khusus dengan Ikon === */
+.home-btn {
+  background-color: white;
+  color: #e3e3f4;
+  font-size: 1rem;
+}
+
+.home-btn i {
+  font-size: 1.1rem;
+}
+
+/* === Sekilas + Logo Tengah === */
+.slide-header-center {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.slide-header-center .badge {
+  display: inline-block;
+  background: white;
+  color: black;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.slide-header-center .icon {
+  width: 36px;
+  vertical-align: middle;
+}
+
+.about-me-header {
+  animation: fadeSlideUp 0.6s ease;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+ .about-me-slider {
+    padding: 1.5rem 1rem;
+  }
+
+  .slide-wrapper {
+    padding: 1.5rem 1rem;
+  }
+
+  .slide-data p {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .slide-img {
+    float: none;
+    transform: none;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .slide-img img {
+    width: 120px;
+    margin: auto;
+  }
+
+  .slide-title,
+  .slide-header-center {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .tech-icons {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .tech-icons img {
+    width: 60px;
+  }
+
+  .nav-arrow.left {
+    left: 0;
+  }
+
+  .nav-arrow.right {
+    right: 0;
+  }
+
+  .nav-arrow img {
+    width: 28px;
+  }
+
+  .about-me-title {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+    padding-bottom: 2rem;
+  }
+  
+@media screen and (max-width: 768px) {
+  .menu-wrapper button {
+    width: 100%;
+    max-width: 90px;
+    font-size: 0.8rem;
+    padding: 10px 10px;
+  }
+
+  .menu-btn:nth-child(1) { order: 1; } /* About me */
+  .menu-btn:nth-child(2) { order: 3; } /* Project */
+  .menu-btn:nth-child(3) { order: 2; } /* Home */
+  .menu-btn:nth-child(4) { order: 4; } /* Contact */
+  .menu-btn:nth-child(5) { order: 5; } /* Produk */
+}

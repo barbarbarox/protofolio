@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>article</title>
+  <link rel="stylesheet" href="article.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" href="barox.png" type="image/png" />
+</head>
+<body>
+  <div class="animated-background">
+
+  <!-- ABOUT ME SECTION -->
+  <section id="article-section" class="article"></section>
+    <!-- Background -->
+    <div id="animated-background"></div>
+
+    <!-- Top Navigation -->
+    <nav class="top-menu">
+      <div class="menu-wrapper">
+        <button class="menu-btn home-btn" onclick="window.location.href='about.html'">About Me</button>
+        <button class="menu-btn" onclick="window.location.href='project.html'">Project</button>
+        <button class="menu-btn" onclick="window.location.href='index.html'"><i class="fas fa-home"></i></button>
+        <button class="menu-btn" onclick="window.location.href='contact.html'">Contact</button>
+        <button class="menu-btn" onclick="window.location.href='Skills.html'">Skills</button>
+    </div>
+
+    <div class="article-header-bar">
+      <span>article</span>
+    </div>
+    </nav>
+  <!-- Search Bar & Filter -->
+<section class="article-search-section">
+  <div class="search-container">
+    <div class="search-input-wrapper">
+      <input type="text" id="searchInput" placeholder="Cari....." onkeypress="handleEnter(event)" />
+      <button id="searchBtn"><i class="fas fa-search"></i></button>
+    </div>
+
+    <div class="search-filter-wrapper">
+      <select id="tagFilter">
+        <option value="">Semua Tag</option>
+        <option value="cyber">Cyber Security</option>
+        <option value="linux">Linux</option>
+        <option value="web">Web Dev</option>
+        <option value="python">Python</option>
+        <option value="virtualbox">VirtualBox</option>
+        <option value="XAMPP">XAMPP</option>
+      </select>
+
+
+      <select id="dateFilter">
+        <option value="">Semua Tanggal</option>
+        <option value="2025">2025</option>
+        <option value="2024">2024</option>
+      </select>
+    </div>
+  </div>
+  <div>
+    <section class="article-list">
+      <!-- Artikel 1 -->
+      <a href="artikel/kali-linux.html" class="article-preview" data-tag="cyber linux virtualbox" data-date="2025"">
+        <h2>Instalasi Kali Linux di VirtualBox</h2>
+        <p class="meta">cyber • virtualbox • Linux • 2025</p>
+        <p>Panduan lengkap instalasi Kali Linux menggunakan VirtualBox untuk belajar ethical hacking.</p>
+      </a>
+
+      <!-- Artikel 2 -->
+      <a href="artikel/python-algoritma.html" class="article-preview" data-tag="python" data-date="2025">
+        <h2>Materi Algoritma dan Pemrograman Dasar (Python)</h2>
+        <p class="meta">Python • 2025</p>
+        <p>Penjelasan mudah tentang konsep algoritma dan pemrograman menggunakan bahasa Python.</p>
+      </a>
+
+      <!-- Artikel 3 -->
+      <a href="artikel/masalah-xampp.html" class="article-preview" data-tag="XAMPP" data-date="2025">
+        <h2>Tidak Bisa Tersambung ke phpmyadmin XAMPP</h2>
+        <p class="meta">XAMPP • 2025</p>
+        <p>masalah dalam penggunaan XAMPP.</p>
+      </a>
+    </section>
+  </div>
+</section>
+<script src="article.js"></script>
+</body>
+<script src="article.js"></script>
+</html>
